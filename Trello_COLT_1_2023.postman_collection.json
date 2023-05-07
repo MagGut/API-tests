@@ -1,0 +1,484 @@
+{
+	"info": {
+		"_postman_id": "53dd6198-943a-4b36-9a7e-f7d853bedd7e",
+		"name": "Trello - COLT 1/2023",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20819605",
+		"_collection_link": "https://speeding-satellite-510450.postman.co/workspace/Team-Workspace~ab105460-7b63-412b-800d-6f856df8cf16/collection/20819605-53dd6198-943a-4b36-9a7e-f7d853bedd7e?action=share&creator=20819605&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Board",
+			"item": [
+				{
+					"name": "Create a first board",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/boards/?key={{APIkey}}&token={{token}}&name=tablica",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								""
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{APIkey}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "name",
+									"value": "tablica"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a board",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/boards/644810ec74e531c9d88323b6?key={{APIkey}}&token={{token}}&=",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"644810ec74e531c9d88323b6"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{APIkey}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a memberships of board",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/boards/644810ec74e531c9d88323b6/memberships?key={{APIkey}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"644810ec74e531c9d88323b6",
+								"memberships"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{APIkey}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update data of board",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/boards/644810ec74e531c9d88323b6/?key={{APIkey}}&token={{token}}&name=tablica_nowa_nazwa\n",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"644810ec74e531c9d88323b6",
+								""
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{APIkey}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "name",
+									"value": "tablica_nowa_nazwa\n"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Label on board",
+			"item": [
+				{
+					"name": "Get labels on a board",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/boards/644810ec74e531c9d88323b6/labels?key={{APIkey}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"644810ec74e531c9d88323b6",
+								"labels"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{APIkey}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a label on board",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/boards/644810ec74e531c9d88323b6/labels?name=name&color=blue&key={{APIkey}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"644810ec74e531c9d88323b6",
+								"labels"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "name"
+								},
+								{
+									"key": "color",
+									"value": "blue"
+								},
+								{
+									"key": "key",
+									"value": "{{APIkey}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create a board",
+			"item": [
+				{
+					"name": "Create a new board",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/boards/?key={{APIkey}}&token={{token}}&name=anotherboard",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								""
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{APIkey}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "name",
+									"value": "anotherboard"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a calendarkey",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/boards/64482172addbe56977802ece/calendarKey/generate?key={{APIkey}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"64482172addbe56977802ece",
+								"calendarKey",
+								"generate"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{APIkey}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a emailKey",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/boards/64482172addbe56977802ece/emailKey/generate?key={{APIkey}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"64482172addbe56977802ece",
+								"emailKey",
+								"generate"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{APIkey}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Tag for board",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/boards/64482172addbe56977802ece/idTags?key={{APIkey}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"64482172addbe56977802ece",
+								"idTags"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{APIkey}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a board",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/boards/64482172addbe56977802ece/?key={{APIkey}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"64482172addbe56977802ece",
+								""
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{APIkey}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change name",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/boards/64482172addbe56977802ece/?key={{APIkey}}&token={{token}}&name=lastboard",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"64482172addbe56977802ece",
+								""
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{APIkey}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "name",
+									"value": "lastboard"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delete a board",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/1/boards/64482172addbe56977802ece/?key={{APIkey}}&token={{token}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"64482172addbe56977802ece",
+								""
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{APIkey}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
